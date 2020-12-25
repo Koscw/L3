@@ -1,8 +1,11 @@
+
 public class Pearson {
     private String name;
+    Account account;
 
-    public Pearson(String name) {
+    public Pearson(String name,String password) {
         this.name = name;
+        account = new Account(password);
     }
 
     public class Account {
@@ -12,8 +15,11 @@ public class Pearson {
             this.password = password;
         }
 
+
+
         public void displayAccount() {
-            System.out.println("Pearson name: " + Pearson.this.name);
+            System.out.println("Pearson name: " + Pearson.this.name+password);
         }
     }
 }
+
